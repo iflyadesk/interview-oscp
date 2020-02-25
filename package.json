@@ -8,6 +8,7 @@
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
+        "axios": "^0.19.2",
         "buefy": "^0.8.10",
         "core-js": "^3.6.4",
         "vue": "^2.6.11",
@@ -45,7 +46,7 @@
     },
     "prettier": {
         "trailingComma": "none",
-        "tabWidth": 4,
+        "tabWidth": 2,
         "semi": false,
         "singleQuote": true
     },

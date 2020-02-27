@@ -66,6 +66,255 @@
         </div>
       </div>
 
+      <div v-if="value('school_1_type') === 'true'">
+        <div class="columns">
+          <div class="column">
+            <label class="label">Most Recent School</label>
+            <span>{{ value('school_1_type')}}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Name</label>
+            <span>{{ value('school_1_name') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">Major</label>
+            <span>{{ value('school_1_major') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('school_1_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('school_1_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Capstone Project</label>
+            <span>{{ value('school_1_capstone_project')}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="value('school_2_type') === 'true'">
+        <div class="columns">
+          <div class="column">
+            <label class="label">School 2</label>
+            <span>{{ value('school_2_type')}}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Name</label>
+            <span>{{ value('school_2_name') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">Major</label>
+            <span>{{ value('school_2_major') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('school_2_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('school_2_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Capstone Project</label>
+            <span>{{ value('school_2_capstone_project')}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="value('school_3_type') === 'true'">
+        <div class="columns">
+          <div class="column">
+            <label class="label">School 3</label>
+            <span>{{ value('school_3_type')}}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Name</label>
+            <span>{{ value('school_3_name') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">Major</label>
+            <span>{{ value('school_3_major') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('school_3_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('school_3_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <label class="label">Capstone Project</label>
+            <span>{{ value('school_3_capstone_project')}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="value('latest_employer_name') === 'true'">
+        <div class=columns>
+          <div class="column">
+            <label class="label">Latest Employer Name</label>
+            <span>{{ value('latest_employer_name') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Title</label>
+            <span>{{ value('latest_employer_job_title') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">City</label>
+            <span>{{ value('latest_employer_city') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">State/Region</label>
+            <span>{{ value('latest_employer_state_region') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('latest_employer_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('latest_employer_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Description</label>
+            <span>{{ value('latest_employer_job_description') }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="value('employer_2_name') === 'true'">
+        <div class=columns>
+          <div class="column">
+            <label class="label">Employer 2 Name</label>
+            <span>{{ value('employer_2_name') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Title</label>
+            <span>{{ value('employer_2_job_title') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">City</label>
+            <span>{{ value('employer_2_city') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">State/Region</label>
+            <span>{{ value('employer_2_state_region') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('employer_2_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('employer_2_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Description</label>
+            <span>{{ value('employer_2_job_description') }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="value('employer_3_name') === 'true'">
+        <div class=columns>
+          <div class="column">
+            <label class="label">Employer 3 Name</label>
+            <span>{{ value('employer_3_name') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Title</label>
+            <span>{{ value('employer_3_job_title') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">City</label>
+            <span>{{ value('employer_3_city') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">State/Region</label>
+            <span>{{ value('employer_3_state_region') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Start Year</label>
+            <span>{{ value('employer_3_start_year') }}</span>
+          </div>
+          <div class="column">
+            <label class="label">End Year</label>
+            <span>{{ value('employer_3_end_year') }}</span>
+          </div>
+        </div>
+
+        <div class=columns>
+          <div class="column">
+            <label class="label">Job Description</label>
+            <span>{{ value('employer_3_job_description') }}</span>
+          </div>
+        </div>
+      </div>
+
       <div class="columns">
         <div class="column">
           <label class="label">Most recent salary</label>
@@ -80,6 +329,7 @@
           <span>{{ value('desired_salary_in_two_years') }}</span>
         </div>
       </div>
+
     </section>
     <label class="label section-heading">
       Skills

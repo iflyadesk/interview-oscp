@@ -180,7 +180,7 @@
         </div>
       </div>
 
-      <div v-if="value('latest_employer_name') === 'true'">
+      <div v-if="value('latest_employer_name')">
         <div class=columns>
           <div class="column">
             <label class="label">Latest Employer Name</label>
@@ -225,7 +225,7 @@
         </div>
       </div>
 
-      <div v-if="value('employer_2_name') === 'true'">
+      <div v-if="value('employer_2_name')">
         <div class=columns>
           <div class="column">
             <label class="label">Employer 2 Name</label>
@@ -270,7 +270,7 @@
         </div>
       </div>
 
-      <div v-if="value('employer_3_name') === 'true'">
+      <div v-if="value('employer_3_name')">
         <div class=columns>
           <div class="column">
             <label class="label">Employer 3 Name</label>

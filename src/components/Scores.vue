@@ -1,22 +1,28 @@
 <template>
   <div class="scores">
-    <div class="score"
-         v-for="(field, idx) in fields"
-         :key="idx"
-         :field="field">
-      <h4>
+    <div class="score" v-for="(field, idx) in fields" :key="idx" :field="field">
+      <label class="label">
         {{ field.displayName }}: {{ field.selectedValue }} of
         {{ maxValue(field) }}
-      </h4>
+        <span
+          class="clear-field"
+          v-if="field.selectedValue != null"
+          @click="clearField(field)"
+          >[x]</span
+        >
+      </label>
       <div class="choice">
         <p class="note">{{ field.note }}</p>
         <b-field>
-          <b-radio-button v-for="(choice, idx) in field.choices"
-                          :key="idx"
-                          v-model="field.selectedValue"
-                          :native-value="choice.value"
-                          :type="choiceType(field, choice)"
-                          size="is-small">
+          <b-radio-button
+            v-for="(choice, idx) in field.choices"
+            :key="idx"
+            v-model="field.selectedValue"
+            :native-value="choice.value"
+            :type="choiceType(field, choice)"
+            size="is-small"
+            @input="setField(field)"
+          >
             <span>{{ choice.label }}</span>
           </b-radio-button>
         </b-field>
@@ -29,6 +35,13 @@
 export default {
   name: 'Scores',
   methods: {
+    setField(field) {
+      this.$store.dispatch('setField', field)
+    },
+    clearField(field) {
+      field.selectedValue = null
+      this.$store.dispatch('setField', field)
+    },
     maxValue(field) {
       if (!field) {
         return this.fields
@@ -62,22 +75,32 @@ export default {
 <style lang="scss">
 .scores {
   border-left: 1px solid #999;
-  position: relative;
   overflow-y: scroll;
-  height: 100vh;
+  height: calc(100vh - 260px);
+  top: 260px;
+  position: relative;
+  padding-bottom: 3rem;
 
-  h4 {
+  .label {
     font-weight: bold;
     line-height: 1.2;
   }
+  .label:not(:last-child) {
+    margin-bottom: 0;
+  }
   .score {
     padding: 1rem;
+    .clear-field {
+      color: #aaa;
+      font-weight: normal;
+      cursor: pointer;
+    }
     .choice {
-      padding: 0 10px;
       p.note {
         font-style: italic;
         font-size: 14px;
         line-height: 1;
+        margin-bottom: 0.5rem;
       }
       .field {
         .control {

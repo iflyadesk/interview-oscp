@@ -1,6 +1,6 @@
 <template>
   <div class="total">
-    <h4>Total Score: {{ total() }} of {{ maxValue() }}</h4>
+    <label class="label">Total Score: {{ total() }} of {{ maxValue() }}</label>
     <b-progress
       class="progress"
       :type="progressType()"
@@ -19,6 +19,16 @@ export default {
         .reduce((a, b) => {
           return a + b
         }, 0)
+    },
+    maxValue(field) {
+      if (!field) {
+        return this.fields
+          .map(f => Math.max(...f.choices.map(c => c.value)))
+          .reduce((a, b) => {
+            return a + b
+          }, 0)
+      }
+      return Math.max(...field.choices.map(c => c.value))
     },
     progressValue() {
       return (this.total() / this.maxValue()) * 100
@@ -43,14 +53,7 @@ export default {
 
 <style lang="scss">
 .total {
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  padding: 1rem;
-  border-bottom: 1px solid #999;
-  .progress {
-    width: 80%;
-  }
+  height: 4.25rem;
+  margin-bottom: 0.75rem;
 }
 </style>

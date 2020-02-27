@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
     <Header />
     <div class="columns is-gapless">
       <div class="column is-8">
@@ -26,3 +26,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.app {
+  font-family: sans-serif;
+}
+</style>

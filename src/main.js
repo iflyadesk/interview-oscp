@@ -3,12 +3,16 @@ import App from './App.vue'
 import store from './store'
 import Axios from 'axios'
 
-import { Progress, Field, Radio } from 'buefy'
+/* buefy */
+import { Progress, Field, Radio, Input, Datepicker, Button } from 'buefy'
 import 'buefy/dist/buefy.css'
-
 Vue.use(Field)
 Vue.use(Radio)
 Vue.use(Progress)
+Vue.use(Input)
+Vue.use(Datepicker)
+Vue.use(Button)
+
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false
 

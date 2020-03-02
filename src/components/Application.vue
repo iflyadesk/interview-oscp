@@ -70,7 +70,7 @@
         <div class="columns">
           <div class="column">
             <label class="label">Most Recent School</label>
-            <span>{{ value('school_1_type')}}</span>
+            <span>{{ value('school_1_type') }}</span>
           </div>
         </div>
 
@@ -99,7 +99,7 @@
         <div class="columns">
           <div class="column">
             <label class="label">Capstone Project</label>
-            <span>{{ value('school_1_capstone_project')}}</span>
+            <span>{{ value('school_1_capstone_project') }}</span>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@
         <div class="columns">
           <div class="column">
             <label class="label">School 2</label>
-            <span>{{ value('school_2_type')}}</span>
+            <span>{{ value('school_2_type') }}</span>
           </div>
         </div>
 
@@ -137,7 +137,7 @@
         <div class="columns">
           <div class="column">
             <label class="label">Capstone Project</label>
-            <span>{{ value('school_2_capstone_project')}}</span>
+            <span>{{ value('school_2_capstone_project') }}</span>
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@
         <div class="columns">
           <div class="column">
             <label class="label">School 3</label>
-            <span>{{ value('school_3_type')}}</span>
+            <span>{{ value('school_3_type') }}</span>
           </div>
         </div>
 
@@ -175,27 +175,27 @@
         <div class="columns">
           <div class="column">
             <label class="label">Capstone Project</label>
-            <span>{{ value('school_3_capstone_project')}}</span>
+            <span>{{ value('school_3_capstone_project') }}</span>
           </div>
         </div>
       </div>
 
-      <div v-if="value('latest_employer_name')">
-        <div class=columns>
+      <div v-if="value('latest_employer_name')" class="employer">
+        <div class="columns">
           <div class="column">
             <label class="label">Latest Employer Name</label>
             <span>{{ value('latest_employer_name') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Title</label>
             <span>{{ value('latest_employer_job_title') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">City</label>
             <span>{{ value('latest_employer_city') }}</span>
@@ -206,7 +206,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Start Year</label>
             <span>{{ value('latest_employer_start_year') }}</span>
@@ -217,7 +217,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Description</label>
             <span>{{ value('latest_employer_job_description') }}</span>
@@ -225,22 +225,22 @@
         </div>
       </div>
 
-      <div v-if="value('employer_2_name')">
-        <div class=columns>
+      <div v-if="value('employer_2_name')" class="employer">
+        <div class="columns">
           <div class="column">
             <label class="label">Employer 2 Name</label>
             <span>{{ value('employer_2_name') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Title</label>
             <span>{{ value('employer_2_job_title') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">City</label>
             <span>{{ value('employer_2_city') }}</span>
@@ -251,7 +251,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Start Year</label>
             <span>{{ value('employer_2_start_year') }}</span>
@@ -262,7 +262,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Description</label>
             <span>{{ value('employer_2_job_description') }}</span>
@@ -270,22 +270,22 @@
         </div>
       </div>
 
-      <div v-if="value('employer_3_name')">
-        <div class=columns>
+      <div v-if="value('employer_3_name')" class="employer">
+        <div class="columns">
           <div class="column">
             <label class="label">Employer 3 Name</label>
             <span>{{ value('employer_3_name') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Title</label>
             <span>{{ value('employer_3_job_title') }}</span>
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">City</label>
             <span>{{ value('employer_3_city') }}</span>
@@ -296,7 +296,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Start Year</label>
             <span>{{ value('employer_3_start_year') }}</span>
@@ -307,7 +307,7 @@
           </div>
         </div>
 
-        <div class=columns>
+        <div class="columns">
           <div class="column">
             <label class="label">Job Description</label>
             <span>{{ value('employer_3_job_description') }}</span>
@@ -329,7 +329,6 @@
           <span>{{ value('desired_salary_in_two_years') }}</span>
         </div>
       </div>
-
     </section>
     <label class="label section-heading">
       Skills
@@ -548,6 +547,10 @@ export default {
   }
   .section {
     padding: 1rem 2rem;
+  }
+  .employer {
+    border-top: 5px solid #eee;
+    padding-bottom: 1rem;
   }
 }
 </style>

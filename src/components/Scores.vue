@@ -1,37 +1,53 @@
 <template>
   <div class="scores">
-    <div class="score" v-for="(field, idx) in fields" :key="idx" :field="field">
-      <label class="label">
-        {{ field.displayName }}: {{ field.selectedValue }} of
-        {{ maxValue(field) }}
-        <span
-          class="clear-field"
-          v-if="field.selectedValue != null"
-          @click="clearField(field)"
-          >[x]</span
-        >
-      </label>
-      <div class="choice">
-        <p class="note">{{ field.note }}</p>
-        <b-field>
-          <b-radio-button
-            v-for="(choice, idx) in field.choices"
-            :key="idx"
-            v-model="field.selectedValue"
-            :native-value="choice.value"
-            :type="choiceType(field, choice)"
-            size="is-small"
-            @input="setField(field)"
-          >
-            <span>{{ choice.label }}</span>
-          </b-radio-button>
-        </b-field>
+    <div class="columns">
+      <div class="column">
+        <GIBill class="score" />
+      </div>
+    </div>
+    <div
+      class="columns"
+      v-for="(field, idx) in fields"
+      :key="idx"
+      :field="field"
+    >
+      <div class="column">
+        <div class="score">
+          <label class="label">
+            {{ field.displayName }}: {{ field.selectedValue }} of
+            {{ maxValue(field) }}
+            <span
+              class="clear-field"
+              v-if="field.selectedValue != null"
+              @click="clearField(field)"
+              >[x]</span
+            >
+          </label>
+          <div class="choice">
+            <p class="note">{{ field.note }}</p>
+            <b-field>
+              <b-radio-button
+                v-for="(choice, idx) in field.choices"
+                :key="idx"
+                v-model="field.selectedValue"
+                :native-value="choice.value"
+                :type="choiceType(field, choice)"
+                size="is-small"
+                @input="setField(field)"
+              >
+                <span>{{ choice.label }}</span>
+              </b-radio-button>
+            </b-field>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import GIBill from './GIBill'
+
 export default {
   name: 'Scores',
   methods: {
@@ -68,18 +84,18 @@ export default {
     fields() {
       return this.$store.getters.fields
     }
+  },
+  components: {
+    GIBill
   }
 }
 </script>
 
 <style lang="scss">
 .scores {
-  border-left: 1px solid #999;
   overflow-y: scroll;
-  height: calc(100vh - 260px);
-  top: 260px;
-  position: relative;
-  padding-bottom: 3rem;
+  height: calc(100vh - 275px);
+  padding: 1rem 1rem 3rem 1rem;
 
   .label {
     font-weight: bold;
@@ -89,7 +105,6 @@ export default {
     margin-bottom: 0;
   }
   .score {
-    padding: 1rem;
     .clear-field {
       color: #aaa;
       font-weight: normal;
@@ -101,16 +116,6 @@ export default {
         font-size: 14px;
         line-height: 1;
         margin-bottom: 0.5rem;
-      }
-      .field {
-        .control {
-          .b-radio.radio.button {
-            height: 3em;
-            span {
-              white-space: normal;
-            }
-          }
-        }
       }
     }
   }

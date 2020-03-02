@@ -264,9 +264,7 @@ export default {
 <style lang="scss">
 .application {
   font-size: 0.875rem;
-  height: calc(100vh - 260px);
-  top: 260px;
-  position: relative;
+  height: calc(100vh - 185px);
   overflow-y: scroll;
   padding-bottom: 3rem;
 

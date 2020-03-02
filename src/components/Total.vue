@@ -50,10 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.total {
-  height: 4.25rem;
-  margin-bottom: 0.75rem;
-}
-</style>

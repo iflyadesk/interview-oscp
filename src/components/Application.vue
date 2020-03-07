@@ -43,12 +43,30 @@
 
       <div class="columns">
         <div class="column">
-          <label class="label">Bootcamp</label>
-          <span>{{ value('bootcamp') }}</span>
+          <label class="label">Bootcamp Selected</label>
+          <div>{{ value('bootcamp') }}</div>
         </div>
         <div class="column">
           <label class="label">Lead Sources:</label>
           <span>{{ value('lead_sources') }}</span>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <label class="label">PRO</label>
+          <div v-for="(program, idx) in programType" :key="`pro-${idx}`">
+            {{ program }}
+          </div>
+        </div>
+        <div class="column">
+          <label class="label">REMOTE</label>
+          <div
+            v-for="(program, idx) in programTypeRemote"
+            :key="`remote-${idx}`"
+          >
+            {{ program }}
+          </div>
         </div>
       </div>
     </section>
@@ -320,14 +338,6 @@
           <label class="label">Most recent salary</label>
           <span>{{ value('most_recent_salary') }}</span>
         </div>
-        <div class="column">
-          <label class="label">Desired salary in 6 mo</label>
-          <span>{{ value('desired_salary_in_six_months') }}</span>
-        </div>
-        <div class="column">
-          <label class="label">Desired salary in 2 yrs</label>
-          <span>{{ value('desired_salary_in_two_years') }}</span>
-        </div>
       </div>
     </section>
     <label class="label section-heading">
@@ -475,9 +485,21 @@ export default {
   computed: {
     contact() {
       return this.$store.getters.contact
+    },
+    programType() {
+      return this.parseHubspotToArray(this.value('program_type'))
+    },
+    programTypeRemote() {
+      return this.parseHubspotToArray(this.value('program_type_remote'))
     }
   },
   methods: {
+    parseHubspotToArray(value) {
+      if (value === null || value === '') {
+        return []
+      }
+      return value.split(';')
+    },
     value(field) {
       return this.$store.getters.contactValue(field)
     },
@@ -489,6 +511,7 @@ export default {
         })
         .catch(error => console.log(error))
     },
+
     vid() {
       return this.getUrlVars().vid
     },
@@ -549,8 +572,9 @@ export default {
     padding: 1rem 2rem;
   }
   .employer {
-    border-top: 5px solid #eee;
-    padding-bottom: 1rem;
+    border: 5px solid #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
   }
 }
 </style>

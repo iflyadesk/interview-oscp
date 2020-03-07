@@ -10,7 +10,7 @@
         <Scholarship />
       </div>
       <div class="column">
-        <b-field label="Amount">
+        <b-field label="Amount ($)">
           <b-input
             type="number"
             min="0"
@@ -106,7 +106,7 @@ export default {
   padding: 1rem;
   border-top: 1px solid #999;
   .has-margin-top {
-    margin-top: 20px;
+    margin-top: 0.8rem;
   }
 }
 </style>

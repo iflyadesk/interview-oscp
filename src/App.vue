@@ -36,11 +36,19 @@ export default {
   .left-border {
     border-left: 1px solid #999;
   }
-  .field .control .b-radio.radio.button {
-    height: 3em;
+  .field .control .b-radio.radio.button,
+  .field .control .b-checkbox.checkbox.button {
+    height: 2.5rem;
     span {
       white-space: normal;
     }
+  }
+  .label {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .label:not(:last-child) {
+    margin-bottom: 0.25rem;
   }
 }
 </style>

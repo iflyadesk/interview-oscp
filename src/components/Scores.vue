@@ -5,6 +5,8 @@
         <GIBill class="score" />
       </div>
     </div>
+
+    <!-- list of fields from fields  -->
     <div
       class="columns"
       v-for="(field, idx) in fields"
@@ -42,11 +44,33 @@
         </div>
       </div>
     </div>
+    <!-- end of list of fields from fields  -->
+
+    <div class="columns">
+      <div class="column">
+        <Bootcamp class="score" />
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <RequireFundamentals class="score" />
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <SkillsAssessment class="score" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import GIBill from './GIBill'
+import Bootcamp from './Bootcamp'
+import RequireFundamentals from './RequireFundamentals'
+import SkillsAssessment from './SkillsAssessment'
 
 export default {
   name: 'Scores',
@@ -86,7 +110,10 @@ export default {
     }
   },
   components: {
-    GIBill
+    GIBill,
+    Bootcamp,
+    RequireFundamentals,
+    SkillsAssessment
   }
 }
 </script>
@@ -94,16 +121,9 @@ export default {
 <style lang="scss">
 .scores {
   overflow-y: scroll;
-  height: calc(100vh - 275px);
+  height: calc(100vh - 285px);
   padding: 1rem 1rem 3rem 1rem;
 
-  .label {
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  .label:not(:last-child) {
-    margin-bottom: 0;
-  }
   .score {
     .clear-field {
       color: #aaa;

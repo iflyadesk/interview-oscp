@@ -4,14 +4,25 @@ import store from './store'
 import Axios from 'axios'
 
 /* buefy */
-import { Progress, Field, Radio, Input, Datepicker, Button } from 'buefy'
+import {
+  Button,
+  Checkbox,
+  Datepicker,
+  Field,
+  Input,
+  Progress,
+  Radio,
+  Select
+} from 'buefy'
 import 'buefy/dist/buefy.css'
-Vue.use(Field)
-Vue.use(Radio)
-Vue.use(Progress)
-Vue.use(Input)
-Vue.use(Datepicker)
 Vue.use(Button)
+Vue.use(Checkbox)
+Vue.use(Datepicker)
+Vue.use(Field)
+Vue.use(Input)
+Vue.use(Progress)
+Vue.use(Radio)
+Vue.use(Select)
 
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false

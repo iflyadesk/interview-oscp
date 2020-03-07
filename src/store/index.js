@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     contact: {},
     dirty: { properties: [] },
-    fields: fields
+    fields: fields,
+    propertyOptions: []
   },
   mutations: {
     setContact(state, contact) {
@@ -39,6 +40,9 @@ export default new Vuex.Store({
       } else {
         dirtyProperty.value = value
       }
+    },
+    setPropertyOptions(state, options) {
+      state.propertyOptions = options
     }
   },
   getters: {
@@ -55,7 +59,11 @@ export default new Vuex.Store({
       }
     },
     fields: state => state.fields,
-    properties: state => state.dirty.properties
+    properties: state => state.dirty.properties,
+    propertyOptions: state => state.propertyOptions,
+    propertyOption: state => name => {
+      return state.propertyOptions.find(po => po.name === name)
+    }
   },
   actions: {
     setContact(context, contact) {
@@ -71,6 +79,9 @@ export default new Vuex.Store({
     },
     setProperty(context, { name, value }) {
       context.commit('setProperty', { name, value })
+    },
+    setPropertyOptions(context, { options }) {
+      context.commit('setPropertyOptions', options)
     }
   }
 })

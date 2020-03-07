@@ -71,17 +71,5 @@ export default {
 .header {
   border-bottom: 1px solid #999;
   padding: 1rem;
-  background: white;
-  z-index: 5;
-  .field {
-    .control {
-      .b-radio.radio.button {
-        height: 3em;
-        span {
-          white-space: normal;
-        }
-      }
-    }
-  }
 }
 </style>

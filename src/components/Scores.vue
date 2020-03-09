@@ -63,6 +63,12 @@
         <SkillsAssessment class="score" />
       </div>
     </div>
+
+    <div class="columns">
+      <div class="column">
+        <LeadStatus class="score" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,6 +77,7 @@ import GIBill from './GIBill'
 import Bootcamp from './Bootcamp'
 import RequireFundamentals from './RequireFundamentals'
 import SkillsAssessment from './SkillsAssessment'
+import LeadStatus from './LeadStatus'
 
 export default {
   name: 'Scores',
@@ -113,7 +120,8 @@ export default {
     GIBill,
     Bootcamp,
     RequireFundamentals,
-    SkillsAssessment
+    SkillsAssessment,
+    LeadStatus
   }
 }
 </script>

@@ -82,7 +82,7 @@ export default new Vuex.Store({
       context.commit('setProperty', {
         name: field.name,
         value:
-          field.selecteValue == null ? null : field.selectedValue.toString()
+          field.selectedValue === null ? null : field.selectedValue.toString()
       })
     },
     setProperty(context, { name, value }) {

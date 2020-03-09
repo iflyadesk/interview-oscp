@@ -38,6 +38,10 @@ export default {
         return this.$store.getters.contactValue('interviewed_by')
       },
       set(value) {
+        let oldValue = this.$store.getters.contactValue('interviewed_by')
+        if (oldValue === value) {
+          return
+        }
         this.$store.dispatch('setProperty', { name: 'interviewed_by', value })
       }
     },

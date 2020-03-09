@@ -2,13 +2,20 @@
   <div class="header">
     <div class="columns">
       <div class="column">
-        <b-field label="Interviewed by">
-          <b-input v-model="interviewedBy" />
-        </b-field>
-        <b-field label="Interview Date">
-          <b-datepicker v-model="interviewDate" />
-        </b-field>
+        <div class="columns">
+          <div class="column">
+            <InterviewedBy />
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <b-field label="Interview Date">
+              <b-datepicker v-model="interviewDate" />
+            </b-field>
+          </div>
+        </div>
       </div>
+
       <div class="column">
         <label class="label">Interview Notes</label>
         <b-field>
@@ -20,6 +27,7 @@
 </template>
 
 <script>
+import InterviewedBy from './InterviewedBy'
 import moment from 'moment-timezone'
 
 export default {
@@ -46,14 +54,6 @@ export default {
         })
       }
     },
-    interviewedBy: {
-      get() {
-        return this.$store.getters.contactValue('interviewed_by')
-      },
-      set(value) {
-        this.$store.dispatch('setProperty', { name: 'interviewed_by', value })
-      }
-    },
     interviewNotes: {
       get() {
         return this.$store.getters.contactValue('interview_notes')
@@ -63,7 +63,9 @@ export default {
       }
     }
   },
-  components: {}
+  components: {
+    InterviewedBy
+  }
 }
 </script>
 

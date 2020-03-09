@@ -5,6 +5,7 @@ import Axios from 'axios'
 
 /* buefy */
 import {
+  Autocomplete,
   Button,
   Checkbox,
   Datepicker,
@@ -15,6 +16,7 @@ import {
   Select
 } from 'buefy'
 import 'buefy/dist/buefy.css'
+Vue.use(Autocomplete)
 Vue.use(Button)
 Vue.use(Checkbox)
 Vue.use(Datepicker)

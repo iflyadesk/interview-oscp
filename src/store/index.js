@@ -9,7 +9,8 @@ export default new Vuex.Store({
     contact: {},
     dirty: { properties: [] },
     fields: fields,
-    propertyOptions: []
+    propertyOptions: [],
+    owners: []
   },
   mutations: {
     setContact(state, contact) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
       if (field) {
         field = updated
       }
+    },
+    setOwners(state, owners) {
+      state.owners = owners
     },
     setProperty(state, { name, value }) {
       if (!state.contact.properties[name]) {
@@ -59,6 +63,7 @@ export default new Vuex.Store({
       }
     },
     fields: state => state.fields,
+    owners: state => state.owners,
     properties: state => state.dirty.properties,
     propertyOptions: state => state.propertyOptions,
     propertyOption: state => name => {
@@ -68,6 +73,9 @@ export default new Vuex.Store({
   actions: {
     setContact(context, contact) {
       context.commit('setContact', contact)
+    },
+    setOwners(context, owners) {
+      context.commit('setOwners', owners)
     },
     setField(context, field) {
       context.commit('setField', field)

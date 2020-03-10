@@ -78,8 +78,8 @@
       <div class="columns">
         <div class="column">
           <label class="label">LinkedIn</label>
-          <a :href="value('linkedinbio')" target="_blank">{{
-            value('linkedinbio')
+          <a :href="value('linkedin_profile')" target="_blank">{{
+            value('linkedin_profile')
           }}</a>
         </div>
       </div>

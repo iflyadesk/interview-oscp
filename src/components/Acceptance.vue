@@ -12,6 +12,14 @@
       </b-radio-button>
       <b-radio-button
         v-model="acceptance"
+        native-value="Waitlist"
+        type="is-warning"
+        size="is-small"
+      >
+        <span>Waitlist</span>
+      </b-radio-button>
+      <b-radio-button
+        v-model="acceptance"
         native-value="Recommended"
         type="is-warning"
         size="is-small"

@@ -69,15 +69,22 @@
         <LeadStatus class="score" />
       </div>
     </div>
+
+    <div class="columns">
+      <div class="column">
+        <BootcampLeadStrength class="score" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import GIBill from './GIBill'
 import Bootcamp from './Bootcamp'
+import BootcampLeadStrength from './BootcampLeadStrength'
+import GIBill from './GIBill'
+import LeadStatus from './LeadStatus'
 import RequireFundamentals from './RequireFundamentals'
 import SkillsAssessment from './SkillsAssessment'
-import LeadStatus from './LeadStatus'
 
 export default {
   name: 'Scores',
@@ -117,11 +124,12 @@ export default {
     }
   },
   components: {
-    GIBill,
     Bootcamp,
+    BootcampLeadStrength,
+    GIBill,
+    LeadStatus,
     RequireFundamentals,
-    SkillsAssessment,
-    LeadStatus
+    SkillsAssessment
   }
 }
 </script>

@@ -55,16 +55,15 @@
       <div class="columns">
         <div class="column">
           <label class="label">PRO</label>
-          <div v-for="(program, idx) in programType" :key="`pro-${idx}`">
+          <div v-for="(program, idx) in programType"
+               :key="`pro-${idx}`">
             {{ program }}
           </div>
         </div>
         <div class="column">
           <label class="label">REMOTE</label>
-          <div
-            v-for="(program, idx) in programTypeRemote"
-            :key="`remote-${idx}`"
-          >
+          <div v-for="(program, idx) in programTypeRemote"
+               :key="`remote-${idx}`">
             {{ program }}
           </div>
         </div>
@@ -78,13 +77,14 @@
       <div class="columns">
         <div class="column">
           <label class="label">LinkedIn</label>
-          <a :href="value('linkedin_profile')" target="_blank">{{
+          <a :href="value('linkedin_profile')"
+             target="_blank">{{
             value('linkedin_profile')
           }}</a>
         </div>
       </div>
 
-      <div v-if="value('school_1_type') === 'true'">
+      <div v-if="value('school_1_type')">
         <div class="columns">
           <div class="column">
             <label class="label">Most Recent School</label>
@@ -122,7 +122,7 @@
         </div>
       </div>
 
-      <div v-if="value('school_2_type') === 'true'">
+      <div v-if="value('school_2_type')">
         <div class="columns">
           <div class="column">
             <label class="label">School 2</label>
@@ -160,7 +160,7 @@
         </div>
       </div>
 
-      <div v-if="value('school_3_type') === 'true'">
+      <div v-if="value('school_3_type')">
         <div class="columns">
           <div class="column">
             <label class="label">School 3</label>
@@ -198,7 +198,8 @@
         </div>
       </div>
 
-      <div v-if="value('latest_employer_name')" class="employer">
+      <div v-if="value('latest_employer_name')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Latest Employer Name</label>
@@ -243,7 +244,8 @@
         </div>
       </div>
 
-      <div v-if="value('employer_2_name')" class="employer">
+      <div v-if="value('employer_2_name')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Employer 2 Name</label>
@@ -288,7 +290,8 @@
         </div>
       </div>
 
-      <div v-if="value('employer_3_name')" class="employer">
+      <div v-if="value('employer_3_name')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Employer 3 Name</label>
@@ -344,7 +347,8 @@
       Skills
     </label>
     <section class="section">
-      <div v-if="value('computer_networking') === 'true'" class="columns">
+      <div v-if="value('computer_networking') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Data Networking</label>
           <span>
@@ -354,7 +358,8 @@
         </div>
       </div>
 
-      <div v-if="value('linux_command_line') === 'true'" class="columns">
+      <div v-if="value('linux_command_line') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Linux Command Line</label>
           <span>
@@ -363,10 +368,8 @@
         </div>
       </div>
 
-      <div
-        v-if="value('javascript_ecma_script_typescript') === 'true'"
-        class="columns"
-      >
+      <div v-if="value('javascript_ecma_script_typescript') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Javascript</label>
           <span>
@@ -375,7 +378,8 @@
         </div>
       </div>
 
-      <div v-if="value('python') === 'true'" class="columns">
+      <div v-if="value('python') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Python</label>
           <span>
@@ -384,7 +388,8 @@
         </div>
       </div>
 
-      <div v-if="value('sql_mysql_postgres_t_sql') === 'true'" class="columns">
+      <div v-if="value('sql_mysql_postgres_t_sql') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">SQL / MySQL / Postgres / T-SQL</label>
           <span>
@@ -393,10 +398,8 @@
         </div>
       </div>
 
-      <div
-        v-if="value('other_programming_languages') === 'true'"
-        class="columns"
-      >
+      <div v-if="value('other_programming_languages') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Other Programming Languages</label>
           <span>
@@ -406,10 +409,8 @@
         </div>
       </div>
 
-      <div
-        v-if="value('governance_risk_and_compliance') === 'true'"
-        class="columns"
-      >
+      <div v-if="value('governance_risk_and_compliance') === 'true'"
+           class="columns">
         <div class="column">
           <label class="label">Governance, Risk, and Compliance</label>
           <span>
@@ -418,11 +419,10 @@
         </div>
       </div>
 
-      <div v-if="value('other_languages') === 'true'" class="columns">
+      <div v-if="value('other_languages') === 'true'"
+           class="columns">
         <div class="column">
-          <label class="label"
-            >Other Technical / Computer / Security Skills</label
-          >
+          <label class="label">Other Technical / Computer / Security Skills</label>
           <span>
             {{ value('other_languages_proficiency') }}
           </span>

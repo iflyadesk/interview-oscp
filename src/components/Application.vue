@@ -84,7 +84,8 @@
         </div>
       </div>
 
-      <div v-if="value('school_1_type')">
+      <div v-if="value('school_1_type')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Most Recent School</label>
@@ -122,7 +123,8 @@
         </div>
       </div>
 
-      <div v-if="value('school_2_type')">
+      <div v-if="value('school_2_type')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">School 2</label>
@@ -160,7 +162,8 @@
         </div>
       </div>
 
-      <div v-if="value('school_3_type')">
+      <div v-if="value('school_3_type')"
+           class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">School 3</label>

@@ -10,7 +10,7 @@
 
         <div class="column">
           <label class="label">Last Name</label>
-          <span> {{ value('lastname') }}</span>
+          <span>{{ value('lastname') }}</span>
         </div>
       </div>
       <div class="columns">
@@ -55,37 +55,33 @@
       <div class="columns">
         <div class="column">
           <label class="label">PRO</label>
-          <div v-for="(program, idx) in programType"
-               :key="`pro-${idx}`">
-            {{ program }}
-          </div>
+          <div v-for="(program, idx) in programType" :key="`pro-${idx}`">{{ program }}</div>
         </div>
         <div class="column">
           <label class="label">REMOTE</label>
-          <div v-for="(program, idx) in programTypeRemote"
-               :key="`remote-${idx}`">
-            {{ program }}
-          </div>
+          <div v-for="(program, idx) in programTypeRemote" :key="`remote-${idx}`">{{ program }}</div>
         </div>
       </div>
     </section>
 
-    <label class="label section-heading">
-      Education and Employment
-    </label>
+    <label class="label section-heading">Education and Employment</label>
     <section class="section">
       <div class="columns">
         <div class="column">
           <label class="label">LinkedIn</label>
-          <a :href="value('linkedin_profile')"
-             target="_blank">{{
+          <a :href="value('linkedin_profile')" target="_blank">
+            {{
             value('linkedin_profile')
-          }}</a>
+            }}
+          </a>
+        </div>
+        <div class="column">
+          <label class="label">Resume</label>
+          <a :href="value('upload_resume')" target="_blank" v-if="value('upload_resume')">View</a>
         </div>
       </div>
 
-      <div v-if="value('school_1_type')"
-           class="employer">
+      <div v-if="value('school_1_type')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Most Recent School</label>
@@ -123,8 +119,7 @@
         </div>
       </div>
 
-      <div v-if="value('school_2_type')"
-           class="employer">
+      <div v-if="value('school_2_type')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">School 2</label>
@@ -162,8 +157,7 @@
         </div>
       </div>
 
-      <div v-if="value('school_3_type')"
-           class="employer">
+      <div v-if="value('school_3_type')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">School 3</label>
@@ -201,8 +195,7 @@
         </div>
       </div>
 
-      <div v-if="value('latest_employer_name')"
-           class="employer">
+      <div v-if="value('latest_employer_name')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Latest Employer Name</label>
@@ -247,8 +240,7 @@
         </div>
       </div>
 
-      <div v-if="value('employer_2_name')"
-           class="employer">
+      <div v-if="value('employer_2_name')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Employer 2 Name</label>
@@ -293,8 +285,7 @@
         </div>
       </div>
 
-      <div v-if="value('employer_3_name')"
-           class="employer">
+      <div v-if="value('employer_3_name')" class="employer">
         <div class="columns">
           <div class="column">
             <label class="label">Employer 3 Name</label>
@@ -346,12 +337,9 @@
         </div>
       </div>
     </section>
-    <label class="label section-heading">
-      Skills
-    </label>
+    <label class="label section-heading">Skills</label>
     <section class="section">
-      <div v-if="value('computer_networking') === 'true'"
-           class="columns">
+      <div v-if="value('computer_networking') === 'true'" class="columns">
         <div class="column">
           <label class="label">Data Networking</label>
           <span>
@@ -361,48 +349,35 @@
         </div>
       </div>
 
-      <div v-if="value('linux_command_line') === 'true'"
-           class="columns">
+      <div v-if="value('linux_command_line') === 'true'" class="columns">
         <div class="column">
           <label class="label">Linux Command Line</label>
-          <span>
-            {{ value('linux_command_line_proficiency') }}
-          </span>
+          <span>{{ value('linux_command_line_proficiency') }}</span>
         </div>
       </div>
 
-      <div v-if="value('javascript_ecma_script_typescript') === 'true'"
-           class="columns">
+      <div v-if="value('javascript_ecma_script_typescript') === 'true'" class="columns">
         <div class="column">
           <label class="label">Javascript</label>
-          <span>
-            {{ value('javascript_ecma_script_typescript_proficiency') }}
-          </span>
+          <span>{{ value('javascript_ecma_script_typescript_proficiency') }}</span>
         </div>
       </div>
 
-      <div v-if="value('python') === 'true'"
-           class="columns">
+      <div v-if="value('python') === 'true'" class="columns">
         <div class="column">
           <label class="label">Python</label>
-          <span>
-            {{ value('python_proficiency') }}
-          </span>
+          <span>{{ value('python_proficiency') }}</span>
         </div>
       </div>
 
-      <div v-if="value('sql_mysql_postgres_t_sql') === 'true'"
-           class="columns">
+      <div v-if="value('sql_mysql_postgres_t_sql') === 'true'" class="columns">
         <div class="column">
           <label class="label">SQL / MySQL / Postgres / T-SQL</label>
-          <span>
-            {{ value('sql_mysql_postgres_t_sql_proficiency') }}
-          </span>
+          <span>{{ value('sql_mysql_postgres_t_sql_proficiency') }}</span>
         </div>
       </div>
 
-      <div v-if="value('other_programming_languages') === 'true'"
-           class="columns">
+      <div v-if="value('other_programming_languages') === 'true'" class="columns">
         <div class="column">
           <label class="label">Other Programming Languages</label>
           <span>
@@ -412,41 +387,27 @@
         </div>
       </div>
 
-      <div v-if="value('governance_risk_and_compliance') === 'true'"
-           class="columns">
+      <div v-if="value('governance_risk_and_compliance') === 'true'" class="columns">
         <div class="column">
           <label class="label">Governance, Risk, and Compliance</label>
-          <span>
-            {{ value('governance_risk_and_compliance_proficiency') }}
-          </span>
+          <span>{{ value('governance_risk_and_compliance_proficiency') }}</span>
         </div>
       </div>
 
-      <div v-if="value('other_languages') === 'true'"
-           class="columns">
+      <div v-if="value('other_languages') === 'true'" class="columns">
         <div class="column">
           <label class="label">Other Technical / Computer / Security Skills</label>
-          <span>
-            {{ value('other_languages_proficiency') }}
-          </span>
+          <span>{{ value('other_languages_proficiency') }}</span>
         </div>
       </div>
     </section>
-    <label class="label section-heading">
-      Certifications
-    </label>
-    <section class="section">
-      {{ value('certifications') }}
-    </section>
+    <label class="label section-heading">Certifications</label>
+    <section class="section">{{ value('certifications') }}</section>
 
     <label class="label section-heading">Essays</label>
     <section class="section is-last">
-      <label class="label">
-        What's your story?
-      </label>
-      <p>
-        {{ value('personal_statement') }}
-      </p>
+      <label class="label">What's your story?</label>
+      <p>{{ value('personal_statement') }}</p>
 
       <div class="vertical-space"></div>
 
@@ -455,22 +416,16 @@
         Security Academy?
       </label>
 
-      <p>
-        {{ value('life_change_essay') }}
-      </p>
+      <p>{{ value('life_change_essay') }}</p>
 
       <div class="vertical-space"></div>
 
-      <label class="label">
-        What excites you about cybersecurity?
-      </label>
+      <label class="label">What excites you about cybersecurity?</label>
       <p>{{ value('cybersecurity_essay') }}</p>
 
       <div class="vertical-space"></div>
 
-      <label class="label">
-        (Optional) What makes you uniquely qualified for a partial scholarship?
-      </label>
+      <label class="label">(Optional) What makes you uniquely qualified for a partial scholarship?</label>
       <p>{{ value('scholarship_essay') }}</p>
     </section>
   </div>

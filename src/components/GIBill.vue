@@ -1,6 +1,6 @@
 <template>
   <div class="gibill">
-    <label class="label">GI Bill?</label>
+    <label class="label">Active GI Bill Benefit?</label>
     <b-field>
       <b-radio-button
         v-model="giBill"

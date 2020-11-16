@@ -26,6 +26,14 @@
       >
         <span>Highly Recommended</span>
       </b-radio-button>
+      <b-radio-button
+        v-model="scholarship"
+        native-value="Full Ride Nominee"
+        type="is-success"
+        size="is-small"
+      >
+        <span>Full Ride Nominee</span>
+      </b-radio-button>
     </b-field>
   </div>
 </template>

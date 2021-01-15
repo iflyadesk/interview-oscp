@@ -55,11 +55,18 @@
       <div class="columns">
         <div class="column">
           <label class="label">PRO</label>
-          <div v-for="(program, idx) in programType" :key="`pro-${idx}`">{{ program }}</div>
+          <div v-for="(program, idx) in programType" :key="`pro-${idx}`">
+            {{ program }}
+          </div>
         </div>
         <div class="column">
           <label class="label">REMOTE</label>
-          <div v-for="(program, idx) in programTypeRemote" :key="`remote-${idx}`">{{ program }}</div>
+          <div
+            v-for="(program, idx) in programTypeRemote"
+            :key="`remote-${idx}`"
+          >
+            {{ program }}
+          </div>
         </div>
       </div>
     </section>
@@ -70,14 +77,17 @@
         <div class="column">
           <label class="label">LinkedIn</label>
           <a :href="value('linkedin_profile')" target="_blank">
-            {{
-            value('linkedin_profile')
-            }}
+            {{ value('linkedin_profile') }}
           </a>
         </div>
         <div class="column">
           <label class="label">Resume</label>
-          <a :href="value('upload_resume')" target="_blank" v-if="value('upload_resume')">View</a>
+          <a
+            :href="value('upload_resume')"
+            target="_blank"
+            v-if="value('upload_resume')"
+            >View</a
+          >
         </div>
       </div>
 
@@ -356,10 +366,15 @@
         </div>
       </div>
 
-      <div v-if="value('javascript_ecma_script_typescript') === 'true'" class="columns">
+      <div
+        v-if="value('javascript_ecma_script_typescript') === 'true'"
+        class="columns"
+      >
         <div class="column">
           <label class="label">Javascript</label>
-          <span>{{ value('javascript_ecma_script_typescript_proficiency') }}</span>
+          <span>{{
+            value('javascript_ecma_script_typescript_proficiency')
+          }}</span>
         </div>
       </div>
 
@@ -377,7 +392,10 @@
         </div>
       </div>
 
-      <div v-if="value('other_programming_languages') === 'true'" class="columns">
+      <div
+        v-if="value('other_programming_languages') === 'true'"
+        class="columns"
+      >
         <div class="column">
           <label class="label">Other Programming Languages</label>
           <span>
@@ -387,7 +405,10 @@
         </div>
       </div>
 
-      <div v-if="value('governance_risk_and_compliance') === 'true'" class="columns">
+      <div
+        v-if="value('governance_risk_and_compliance') === 'true'"
+        class="columns"
+      >
         <div class="column">
           <label class="label">Governance, Risk, and Compliance</label>
           <span>{{ value('governance_risk_and_compliance_proficiency') }}</span>
@@ -396,7 +417,9 @@
 
       <div v-if="value('other_languages') === 'true'" class="columns">
         <div class="column">
-          <label class="label">Other Technical / Computer / Security Skills</label>
+          <label class="label"
+            >Other Technical / Computer / Security Skills</label
+          >
           <span>{{ value('other_languages_proficiency') }}</span>
         </div>
       </div>
@@ -425,7 +448,10 @@
 
       <div class="vertical-space"></div>
 
-      <label class="label">(Optional) What makes you uniquely qualified for a partial scholarship?</label>
+      <label class="label"
+        >(Optional) What makes you uniquely qualified for a partial
+        scholarship?</label
+      >
       <p>{{ value('scholarship_essay') }}</p>
     </section>
   </div>

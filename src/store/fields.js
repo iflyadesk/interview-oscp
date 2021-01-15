@@ -162,32 +162,6 @@ export default [
     selectedValue: null
   },
   {
-    name: 'zoom_preparedness_score',
-    displayName: 'Interview Zoom Preparedness',
-    choices: [
-      {
-        label: 'None Fixed',
-        value: 0
-      },
-      {
-        label: 'Some Fixed',
-        value: 5
-      },
-      {
-        label: 'All Technical Errors Fixed',
-        value: 10
-      },
-      {
-        label: 'Prepared',
-        value: 15
-      }
-    ],
-    note:
-      'Sometimes candidates cannot troubleshoot zoom on their computers or phones. It is a good indicator of their performance in the bootcamp and general aptitude for technology.',
-    selectedValue: null
-  },
-
-  {
     name: 'attitude_score',
     displayName: 'Attitude Indicator',
     choices: [
@@ -250,29 +224,8 @@ export default [
     selectedValue: null
   },
   {
-    name: 'career_urgency_score',
-    displayName: 'Career Urgency',
-    choices: [
-      {
-        label: 'Very Urgent',
-        value: 0
-      },
-      {
-        label: 'Some Urgency',
-        value: 3
-      },
-      {
-        label: 'No Urgency',
-        value: 5
-      }
-    ],
-    note:
-      'Interview Question: What do you plan to do after graduation from the bootcamp?',
-    selectedValue: null
-  },
-  {
     name: 'understands_cybersecurity_score',
-    displayName: 'Understanding of Cybersecurity Concepts',
+    displayName: 'Understanding of Cybersecurity',
     choices: [
       {
         label: 'None',
@@ -296,7 +249,7 @@ export default [
   },
   {
     name: 'understands_networking_score',
-    displayName: 'Understanding of Networking Concepts',
+    displayName: 'Understanding of Networking',
     choices: [
       {
         label: 'None',
@@ -320,7 +273,31 @@ export default [
   },
   {
     name: 'understands_linux_score',
-    displayName: 'Understanding of Linux Concepts',
+    displayName: 'Understanding of Linux',
+    choices: [
+      {
+        label: 'None',
+        value: 0
+      },
+      {
+        label: 'OK',
+        value: 5
+      },
+      {
+        label: 'Good',
+        value: 10
+      },
+      {
+        label: 'Excellent',
+        value: 15
+      }
+    ],
+    note: '',
+    selectedValue: null
+  },
+  {
+    name: 'understands_programming_score',
+    displayName: 'Understanding of Programming',
     choices: [
       {
         label: 'None',
@@ -365,31 +342,6 @@ export default [
     ],
     note:
       'Interview Question: Tell me about a time when you had to learn something new for work. Candidate can also talk about home technology projects and labs.',
-    selectedValue: null
-  },
-
-  {
-    name: 'communication_score',
-    displayName: 'Communication Skills',
-    choices: [
-      {
-        label: 'Needs Improvement',
-        value: 0
-      },
-      {
-        label: 'OK',
-        value: 2
-      },
-      {
-        label: 'Good',
-        value: 3
-      },
-      {
-        label: 'Excellent',
-        value: 5
-      }
-    ],
-    note: '',
     selectedValue: null
   }
 ]

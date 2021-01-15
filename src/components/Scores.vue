@@ -48,24 +48,6 @@
 
     <div class="columns">
       <div class="column">
-        <Bootcamp class="score" />
-      </div>
-    </div>
-
-    <div class="columns">
-      <div class="column">
-        <RequireFundamentals class="score" />
-      </div>
-    </div>
-
-    <div class="columns">
-      <div class="column">
-        <SkillsAssessment class="score" />
-      </div>
-    </div>
-
-    <div class="columns">
-      <div class="column">
         <LeadStatus class="score" />
       </div>
     </div>
@@ -79,12 +61,9 @@
 </template>
 
 <script>
-import Bootcamp from './Bootcamp'
 import BootcampLeadStrength from './BootcampLeadStrength'
 import GIBill from './GIBill'
 import LeadStatus from './LeadStatus'
-import RequireFundamentals from './RequireFundamentals'
-import SkillsAssessment from './SkillsAssessment'
 
 export default {
   name: 'Scores',
@@ -124,12 +103,9 @@ export default {
     }
   },
   components: {
-    Bootcamp,
     BootcampLeadStrength,
     GIBill,
-    LeadStatus,
-    RequireFundamentals,
-    SkillsAssessment
+    LeadStatus
   }
 }
 </script>

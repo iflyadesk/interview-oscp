@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column ">
+      <div class="column">
         <Total />
       </div>
       <div class="column is-narrow">
@@ -83,11 +83,11 @@ export default {
   computed: {
     scholarshipAmount: {
       get() {
-        return this.$store.getters.contactValue('scholarship_amount')
+        return this.$store.getters.contactValue('oscp_scholarship_amount')
       },
       set(value) {
         this.$store.dispatch('setProperty', {
-          name: 'scholarship_amount',
+          name: 'oscp_scholarship_amount',
           value
         })
       }

@@ -44,10 +44,10 @@ export default {
   computed: {
     acceptance: {
       get() {
-        return this.$store.getters.contactValue('acceptance')
+        return this.$store.getters.contactValue('oscp_acceptance')
       },
       set(value) {
-        this.$store.dispatch('setProperty', { name: 'acceptance', value })
+        this.$store.dispatch('setProperty', { name: 'oscp_acceptance', value })
       }
     }
   }

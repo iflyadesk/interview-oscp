@@ -1,14 +1,13 @@
 <template>
   <div class="bootcamp-lead-strength">
-    <b-field label="Bootcamp Lead Strength">
+    <b-field label="OSCP Bootcamp Lead Strength">
       <b-select v-model="model">
         <option
           v-for="(choice, idx) in choices"
           :value="choice.value"
           :key="idx"
+          >{{ choice.label }}</option
         >
-          {{ choice.label }}
-        </option>
       </b-select>
     </b-field>
   </div>
@@ -22,7 +21,7 @@ export default {
       getFieldUrl:
         'https://prod-75.westus.logic.azure.com:443/workflows/2d39be7a1d6a4b54a310387382c8a64c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j-Xexmv1h8o_esVC7k5CYRtIQbEOy2lov7Xj3V_cC24',
       field: {},
-      hsFieldId: 'bootcamp_lead_strength'
+      hsFieldId: 'oscp_bootcamp_lead_strength'
     }
   },
   computed: {

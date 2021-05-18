@@ -44,10 +44,10 @@ export default {
   computed: {
     scholarship: {
       get() {
-        return this.$store.getters.contactValue('scholarship')
+        return this.$store.getters.contactValue('oscp_scholarship')
       },
       set(value) {
-        this.$store.dispatch('setProperty', { name: 'scholarship', value })
+        this.$store.dispatch('setProperty', { name: 'oscp_scholarship', value })
       }
     }
   }

@@ -1,14 +1,13 @@
 <template>
   <div class="lead-status">
-    <b-field label="Lead Status">
-      <b-select v-model="hsLeadStatus">
+    <b-field label="Lead Status OSCP Bootcamp">
+      <b-select v-model="hsLeadStatusOscpBootcamp">
         <option
           v-for="(choice, idx) in choices"
           :value="choice.value"
           :key="idx"
+          >{{ choice.label }}</option
         >
-          {{ choice.label }}
-        </option>
       </b-select>
     </b-field>
   </div>
@@ -21,7 +20,8 @@ export default {
     return {
       getFieldUrl:
         'https://prod-75.westus.logic.azure.com:443/workflows/2d39be7a1d6a4b54a310387382c8a64c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=j-Xexmv1h8o_esVC7k5CYRtIQbEOy2lov7Xj3V_cC24',
-      field: {}
+      field: {},
+      hsFieldId: 'lead_status_oscp_bootccamp'
     }
   },
   computed: {
@@ -31,23 +31,26 @@ export default {
       }
       return this.field.options || []
     },
-    hsLeadStatus: {
+    hsLeadStatusOscpBootcamp: {
       get() {
-        return this.$store.getters.contactValue('hs_lead_status')
+        return this.$store.getters.contactValue(this.hsFieldId)
       },
       set(value) {
-        let oldValue = this.$store.getters.contactValue('hs_lead_status')
+        let oldValue = this.$store.getters.contactValue(this.hsFieldId)
         if (oldValue === value) {
           return
         }
-        this.$store.dispatch('setProperty', { name: 'hs_lead_status', value })
+        this.$store.dispatch('setProperty', {
+          name: this.hsFieldId,
+          value
+        })
       }
     }
   },
   methods: {
     getChoices() {
       this.$axios
-        .post(this.getFieldUrl, { field: 'hs_lead_status' })
+        .post(this.getFieldUrl, { field: this.hsFieldId })
         .then(result => {
           this.field = result.data
         })
